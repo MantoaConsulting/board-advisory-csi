@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sis' Mantoa Selepe | Independent Board Strategist & CSI Practitioner | Mantoa Consulting</title>
+  <meta name="description" content="Sis' Mantoa Selepe helps corporate boards and Social & Ethics Committees design CSI strategies that stand up to commercial scrutiny, earn community trust and strengthen reputation. 15+ years across strategy, community leadership and technology.">
+<meta name="google-site-verification" content="6sqYzS3fLtz_-4rFTj-R-4OUiIroyaUDfRzuuZfU2p4">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sis' Mantoa Selepe | Independent Board Strategist & CSI Practitioner">
+  <meta property="og:description" content="Grounded in community reality. Equipped for corporate governance. Board-level CSI strategy, stakeholder trust and impact storytelling.">
+ <meta property="og:image" content="assets/sis-mantoa-hero.png">
+  <meta name="theme-color" content="#0b0f1c">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #0b0f1c;          /* hero + dark sections */
+      --navy: #142450;         /* corporate base */
+      --navy-soft: #1d3270;
+      --gold: #c9a14a;         /* accents, numbers, CTAs */
+      --gold-soft: #e7d09a;
+      --wine: #8c1d2f;         /* eyebrow labels, highlight panel */
+      --ivory: #f7f3ea;        /* alt section background */
+      --paper: #fffdf8;        /* main background */
+      --text: #1c2134;
+      --muted: #565d73;
+      --line: rgba(201, 161, 74, 0.32);
+      --radius: 16px;
+      --max: 1160px;
+      --font-display: "Gloock", Georgia, "Times New Roman", serif;
+      --font-sans: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      line-height: 1.12;
+      margin: 0 0 0.5em;
+      color: var(--ink);
+    }
+    h2 { font-size: clamp(2rem, 4vw, 3.1rem); letter-spacing: -0.01em; }
+    h3 { font-size: 1.45rem; }
+    p { margin: 0 0 1em; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+    .container { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+    .skip-link {
+      position: absolute; left: -999px; top: 0; z-index: 100;
+      background: var(--gold); color: var(--ink); padding: 0.6rem 1rem; font-weight: 600;
+    }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+
+    .eyebrow {
+      display: flex; align-items: center; gap: 0.75rem;
+      margin: 0 0 1.25rem;
+      font-size: 0.875rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--wine);
+    }
+    .eyebrow::before { content: ""; width: 36px; height: 1px; background: currentColor; }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.9rem 1.6rem; border-radius: 999px;
+      font-weight: 600; font-size: 1rem; text-decoration: none;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: var(--ink); }
+    .btn-gold:hover { background: var(--gold-soft); }
+    .btn-ghost { border-color: rgba(247, 243, 234, 0.45); color: var(--ivory); }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold-soft); }
+    .btn-small { padding: 0.6rem 1.15rem; font-size: 0.9rem; }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(11, 15, 28, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201, 161, 74, 0.18);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 72px; }
+    .brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ivory); }
+    .brand-mark {
+      display: grid; place-items: center; width: 42px; height: 42px;
+      border: 1px solid var(--gold); border-radius: 50%;
+      font-family: var(--font-display); font-size: 1.05rem; color: var(--gold);
+    }
+    .brand-name { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { color: rgba(247, 243, 234, 0.78); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--gold-soft); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative; overflow: hidden; color: var(--ivory);
+      background: radial-gradient(ellipse at 15% 35%, #18275a 0%, var(--ink) 60%);
+    }
+    .hero-network { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .hero-network line { stroke: rgba(231, 208, 154, 0.22); stroke-width: 1; }
+    .hero-network circle { fill: var(--ivory); opacity: 0.55; }
+    .hero-network .glow { fill: var(--gold-soft); opacity: 0.9; animation: twinkle 5s ease-in-out infinite; }
+    .hero-network .glow:nth-of-type(2n) { animation-delay: 1.6s; }
+    .hero-network .glow:nth-of-type(3n) { animation-delay: 3.1s; }
+    @keyframes twinkle { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+
+    .hero-grid {
+      position: relative;
+      display: grid; grid-template-columns: 1.05fr 0.95fr; align-items: end; gap: 2rem;
+      min-height: clamp(580px, calc(100vh - 72px), 860px);
+    }
+    .hero-copy { align-self: center; padding: 4.5rem 0; }
+    .hero .eyebrow { color: var(--gold); }
+    .hero h1 { font-size: clamp(2.75rem, 6.4vw, 5.4rem); color: var(--ivory); margin-bottom: 0.2em; }
+    .hero-role { font-size: clamp(1.05rem, 1.6vw, 1.3rem); font-weight: 500; color: var(--gold-soft); margin-bottom: 1.5rem; }
+    .hero-lead { font-size: clamp(1.1rem, 1.5vw, 1.25rem); color: rgba(247, 243, 234, 0.84); max-width: 36ch; margin-bottom: 2rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
+    .hero-proof { display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; list-style: none; margin: 0; padding: 0; font-size: 0.95rem; color: rgba(247, 243, 234, 0.72); }
+    .hero-proof li::before { content: "\25C6"; color: var(--gold); margin-right: 0.5rem; font-size: 0.7em; }
+
+    .hero-portrait { position: relative; margin: 0; }
+    .hero-portrait img {
+      width: 100%; height: auto;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 22%);
+              mask-image: linear-gradient(to right, transparent 0%, #000 22%);
+    }
+    .portrait-badge {
+      position: absolute; left: 4%; bottom: 2.5rem;
+      padding: 0.9rem 1.2rem; border-radius: 12px;
+      background: rgba(11, 15, 28, 0.88);
+      border: 1px solid var(--line); border-left: 3px solid var(--gold);
+      font-size: 0.95rem; line-height: 1.4;
+    }
+    .portrait-badge strong { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; color: var(--gold-soft); }
+
+    /* ---------- Stats strip ---------- */
+    .stats { background: var(--navy); color: var(--ivory); border-top: 1px solid var(--line); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); list-style: none; margin: 0 auto; padding: 0; }
+    .stat { padding: 2rem 1.5rem; border-left: 1px solid rgba(201, 161, 74, 0.22); }
+    .stat:first-child { border-left: 0; padding-left: 0; }
+    .stat-value { display: block; font-family: var(--font-display); font-size: clamp(1.9rem, 3vw, 2.5rem); line-height: 1.1; color: var(--gold); margin-bottom: 0.35rem; }
+    .stat-label { font-size: 0.95rem; color: rgba(247, 243, 234, 0.78); }
+
+    /* ---------- Sections ---------- */
+    .section { padding: clamp(4rem, 9vw, 7rem) 0; }
+    .section-alt { background: var(--ivory); }
+    .section-head { max-width: 760px; margin-bottom: 3rem; }
+    .section-intro { font-size: 1.15rem; color: var(--muted); }
+
+    /* Profile */
+    .profile-grid { display: grid; grid-template-columns: 5fr 6fr; gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+    .pull-quote {
+      margin: 2rem 0 0; padding: 0.25rem 0 0.25rem 1.5rem;
+      border-left: 3px solid var(--gold);
+      font-family: var(--font-display); font-size: 1.5rem; line-height: 1.35; color: var(--navy);
+    }
+    .profile-body p { font-size: 1.1rem; }
+    .profile-body p:first-child::first-letter {
+      float: left; font-family: var(--font-display); font-size: 3.6rem; line-height: 0.9;
+      padding: 0.3rem 0.6rem 0 0; color: var(--wine);
+    }
+
+    /* Track record */
+    .record-grid { display: grid; grid-template-columns: 1.2fr 1fr; grid-template-rows: auto auto; gap: 1.5rem; }
+    .card {
+      background: #fff; border: 1px solid rgba(20, 36, 80, 0.1); border-top: 3px solid var(--gold);
+      border-radius: var(--radius); padding: 2rem;
+      box-shadow: 0 10px 30px -18px rgba(20, 36, 80, 0.35);
+    }
+    .card p:last-child { margin-bottom: 0; }
+    .card-feature { grid-row: span 2; background: var(--navy); color: rgba(247, 243, 234, 0.88); border-top-color: var(--wine); display: flex; flex-direction: column; justify-content: flex-end; min-height: 320px; }
+    .card-feature h3 { color: var(--ivory); font-size: 1.9rem; }
+    .card-feature .big-number { font-family: var(--font-display); font-size: clamp(4rem, 9vw, 6.5rem); line-height: 1; color: var(--gold); margin-bottom: 1rem; }
+    .card-label { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--wine); margin-bottom: 0.5rem; }
+
+    /* Pillars */
+    .pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .pillar { position: relative; overflow: hidden; }
+    .pillar-num {
+      position: absolute; top: 1rem; right: 1.5rem;
+      font-family: var(--font-display); font-size: 4rem; line-height: 1; color: rgba(201, 161, 74, 0.28);
+    }
+    .pillar h3 { max-width: 16ch; margin-bottom: 1.25rem; color: var(--navy); }
+    .checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+    .checklist li { position: relative; padding-left: 1.5rem; color: var(--muted); }
+    .checklist li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 8px; height: 8px; background: var(--gold); transform: rotate(45deg); }
+    .checklist strong { color: var(--text); font-weight: 600; }
+
+    /* Impact */
+    .impact { position: relative; overflow: hidden; background: var(--ink); color: rgba(247, 243, 234, 0.85); }
+    .impact h2 { color: var(--ivory); }
+    .impact .eyebrow { color: var(--gold); }
+    .impact .section-intro { color: rgba(247, 243, 234, 0.72); }
+    .impact-list { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; list-style: none; margin: 0; padding: 0; }
+    .impact-list::before { content: ""; position: absolute; top: 9px; left: 9px; right: 9px; height: 1px; background: linear-gradient(90deg, var(--gold), rgba(201, 161, 74, 0.15)); }
+    .impact-item { position: relative; padding-top: 2.5rem; }
+    .impact-item::before {
+      content: ""; position: absolute; top: 0; left: 0; width: 19px; height: 19px; border-radius: 50%;
+      background: var(--ink); border: 2px solid var(--gold); box-shadow: 0 0 18px rgba(231, 208, 154, 0.55);
+    }
+    .impact-item h3 { color: var(--gold-soft); font-size: 1.35rem; }
+
+    /* Deliverables */
+    .deliverables { display: grid; gap: 1rem; }
+    .deliverable {
+      display: grid; grid-template-columns: 280px 1fr; gap: 2rem; align-items: start;
+      background: #fff; border: 1px solid rgba(20, 36, 80, 0.1); border-radius: var(--radius); padding: 1.75rem 2rem;
+    }
+    .deliverable h3 { font-size: 1.3rem; color: var(--navy); margin: 0; }
+    .deliverable ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+    .deliverable li { position: relative; padding-left: 1.5rem; }
+    .deliverable li::before { content: "\2192"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+    .feature-panel {
+      margin-top: 2rem; padding: clamp(2rem, 5vw, 3rem); border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--wine), #5e1220); color: rgba(247, 243, 234, 0.9);
+      display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center;
+    }
+    .feature-panel .quote-mark { font-family: var(--font-display); font-size: 6rem; line-height: 0.6; color: var(--gold-soft); }
+    .feature-panel h3 { color: var(--ivory); font-size: 1.8rem; }
+    .feature-panel p { margin: 0; font-size: 1.1rem; max-width: 62ch; }
+
+    /* Credentials */
+    .credentials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+    .degree h3 { color: var(--navy); margin-bottom: 0.4rem; }
+    .degree p { color: var(--muted); }
+    .degree .institution { font-weight: 600; color: var(--wine); margin: 0; }
+    .domains-title { font-family: var(--font-display); font-size: 1.45rem; color: var(--ink); margin-bottom: 1rem; }
+    .domains { display: flex; flex-wrap: wrap; gap: 0.75rem; list-style: none; margin: 0; padding: 0; }
+    .domains li { padding: 0.65rem 1.2rem; border-radius: 999px; border: 1px solid var(--navy); color: var(--navy); font-weight: 600; font-size: 0.95rem; }
+
+    /* Contact */
+    .contact {
+      position: relative; overflow: hidden; text-align: center; color: rgba(247, 243, 234, 0.85);
+      background: radial-gradient(ellipse at 50% 0%, var(--navy-soft) 0%, var(--navy) 45%, var(--ink) 100%);
+    }
+    .contact h2 { color: var(--ivory); max-width: 18ch; margin-inline: auto; }
+    .contact .eyebrow { justify-content: center; color: var(--gold); }
+    .contact p { max-width: 58ch; margin: 0 auto 2.25rem; font-size: 1.15rem; }
+    .contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+    .site-footer { background: var(--ink); color: rgba(247, 243, 234, 0.6); font-size: 0.9rem; padding: 2rem 0; }
+    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+
+    /* Scroll reveal (only when JS is on) */
+    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero-network .glow { animation: none; }
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+      .btn { transition: none; }
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 960px) {
+      .nav { flex-wrap: wrap; row-gap: 0; padding-top: 0.75rem; }
+      .nav-links { order: 3; width: 100%; overflow-x: auto; gap: 1.25rem; padding: 0.75rem 0; white-space: nowrap; }
+      .hero-grid { grid-template-columns: 1fr; min-height: 0; gap: 0; }
+      .hero-copy { padding: 3.5rem 0 1rem; }
+      .hero-portrait { max-width: 460px; margin: 0 auto; }
+      .hero-portrait img {
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%);
+                mask-image: linear-gradient(to bottom, transparent 0%, #000 18%);
+      }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(3) { border-left: 0; padding-left: 0; }
+      .stat:nth-child(n + 3) { border-top: 1px solid rgba(201, 161, 74, 0.22); }
+      .profile-grid, .record-grid, .pillars, .credentials-grid { grid-template-columns: 1fr; }
+      .card-feature { grid-row: auto; min-height: 0; }
+      .impact-list { grid-template-columns: 1fr; gap: 2.5rem; padding-left: 2.5rem; }
+      .impact-list::before { top: 9px; bottom: 9px; left: 9px; right: auto; width: 1px; height: auto; background: linear-gradient(180deg, var(--gold), rgba(201, 161, 74, 0.15)); }
+      .impact-item { padding-top: 0; }
+      .impact-item::before { left: -2.5rem; }
+      .deliverable { grid-template-columns: 1fr; gap: 1rem; }
+    }
+    @media (max-width: 560px) {
+      .brand-name { font-size: 0.8rem; letter-spacing: 0.12em; }
+      .header-cta { display: none; }
+      .stat { padding: 1.5rem 1rem 1.5rem 0; }
+      .stat + .stat { padding-left: 1rem; }
+      .stat:nth-child(3) { padding-left: 0; }
+      .card, .deliverable { padding: 1.5rem; }
+      .feature-panel { grid-template-columns: 1fr; gap: 1rem; }
+      .portrait-badge { bottom: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="#top" aria-label="Mantoa Consulting home">
+        <span class="brand-mark" aria-hidden="true">MS</span>
+        <span class="brand-name">Mantoa Consulting</span>
+      </a><ul class="nav-links">
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#deliverables">Deliverables</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+      </ul>
+      <a class="btn btn-gold" href="https://wa.me/27783095331" target="_blank" rel="noopener">Book a board briefing</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <svg class="hero-network" viewBox="0 0 1440 820" preserveAspectRatio="xMinYMid slice" aria-hidden="true">
+        <line x1="80" y1="120" x2="260" y2="60"/><line x1="260" y1="60" x2="430" y2="190"/>
+        <line x1="80" y1="120" x2="190" y2="330"/><line x1="430" y1="190" x2="190" y2="330"/>
+        <line x1="190" y1="330" x2="370" y2="440"/><line x1="430" y1="190" x2="580" y2="300"/>
+        <line x1="650" y1="80" x2="430" y2="190"/><line x1="650" y1="80" x2="580" y2="300"/>
+        <line x1="370" y1="440" x2="580" y2="300"/><line x1="370" y1="440" x2="690" y2="500"/>
+        <line x1="580" y1="300" x2="690" y2="500"/><line x1="190" y1="330" x2="110" y2="570"/>
+        <line x1="110" y1="570" x2="310" y2="690"/><line x1="310" y1="690" x2="540" y2="640"/>
+        <line x1="370" y1="440" x2="540" y2="640"/><line x1="540" y1="640" x2="690" y2="500"/>
+        <line x1="110" y1="570" x2="40" y2="780"/><line x1="310" y1="690" x2="40" y2="780"/>
+        <circle cx="80" cy="120" r="3"/><circle class="glow" cx="260" cy="60" r="4"/>
+        <circle cx="430" cy="190" r="3"/><circle class="glow" cx="190" cy="330" r="4.5"/>
+        <circle cx="370" cy="440" r="3"/><circle class="glow" cx="580" cy="300" r="4"/>
+        <circle cx="650" cy="80" r="3"/><circle cx="690" cy="500" r="3"/>
+        <circle class="glow" cx="110" cy="570" r="4"/><circle cx="310" cy="690" r="3"/>
+        <circle class="glow" cx="540" cy="640" r="4"/><circle cx="40" cy="780" r="3"/>
+      </svg>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Mantoa Consulting</p>
+          <h1 id="hero-title">Sis' Mantoa Selepe</h1>
+          <p class="hero-role">Independent Board Strategist & CSI Practitioner</p>
+          <p class="hero-lead">CSI strategies that stand up to commercial scrutiny, earn real community trust, and strengthen your reputation in the boardroom and beyond.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://wa.me/27783095331" target="_blank" rel="noopener">Book a board briefing</a>
+            <a class="btn btn-ghost" href="#capabilities">Explore the four pillars</a>
+          </div><ul class="hero-proof">
+            <li>15+ years of leadership</li>
+            <li>BCom Honours, UNISA</li>
+            <li>Published business columnist</li>
+          </ul>
+        </div>
+
+       <figure class="hero-portrait">
+  <img src="assets/sis-mantoa-hero.png" width="1200" height="1311"
+       alt="Portrait of Sis' Mantoa Selepe">
+  <figcaption class="portrait-badge">
+            <strong>Grassroots to Boardroom</strong>
+            Community insight, governance-ready strategy
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="At a glance"><ul class="container stats-grid">
+        <li class="stat"><span class="stat-value">15+</span><span class="stat-label">Years across strategy, community & technology</span></li>
+        <li class="stat"><span class="stat-value">4</span><span class="stat-label">Pillars of strategic advisory</span></li>
+        <li class="stat"><span class="stat-value">BCom Hons</span><span class="stat-label">International Business Strategy, UNISA</span></li>
+        <li class="stat"><span class="stat-value">Published</span><span class="stat-label">Business columnist & commentator</span></li>
+      </ul>
+    </section>
+
+    <!-- PROFILE -->
+    <section class="section" id="profile" aria-labelledby="profile-title">
+      <div class="container profile-grid">
+        <div class="reveal">
+          <p class="eyebrow">Executive Profile</p>
+          <h2 id="profile-title">Grounded in Community Reality. Equipped for Corporate Governance.</h2>
+          <blockquote class="pull-quote">Effective CSI demands more than policy compliance. It demands knowing how communities actually work.</blockquote>
+        </div>
+        <div class="profile-body reveal">
+          <p>With over 15 years of leadership experience across commercial strategy, community mobilisation and technical systems execution, Sis' Mantoa Selepe helps corporate boards align governance mandates with meaningful social transformation.</p>
+          <p>Effective Corporate Social Investment requires more than policy compliance. It demands a deep operational understanding of how communities function, how cross-sector partnerships succeed, and how transformation frameworks endure over time.</p>
+          <p>She partners with boards, Social & Ethics Committees and executive leadership to design CSI strategies that stand up to commercial scrutiny, earn authentic community trust and strengthen corporate reputation, while contributing to the company's long-term profitability.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRACK RECORD -->
+    <section class="section section-alt" id="track-record" aria-labelledby="record-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Track Record & Voice</p>
+          <h2 id="record-title">15+ Years of Community & Thought Leadership</h2>
+          <p class="section-intro">Seasoned execution across business strategy, community programmes and technology.</p>
+        </div>
+        <div class="record-grid">
+          <article class="card card-feature reveal">
+            <div class="big-number">15+</div>
+            <h3>Grassroots Mobilisation & Leadership</h3>
+            <p>Leading multi-stakeholder community upliftment initiatives focused on women, youth and socio-economic empowerment, taking programmes from first concept to structured, on-the-ground execution.</p>
+          </article>
+          <article class="card reveal">
+            <p class="card-label">PR & Brand Authority</p>
+            <h3>A trusted public voice</h3>
+            <p>Published business columnist and strategic stakeholder communicator.</p>
+          </article>
+          <article class="card reveal">
+            <p class="card-label">Technical Literacy</p>
+            <h3>Systems that prove impact</h3>
+            <p>Hands-on digital and systems acumen for structured, credible CSI reporting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section class="section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Core Capabilities</p>
+          <h2 id="capabilities-title">Four Pillars of Strategic Advisory</h2>
+          <p class="section-intro">Practical capabilities shaped by over 15 years of community execution, business strategy and media leadership.</p>
+        </div>
+        <div class="pillars">
+          <article class="card pillar reveal">
+            <span class="pillar-num" aria-hidden="true">I</span>
+            <h3>Practitioner-Led CSI & Community Strategy</h3><ul class="checklist">
+              <li><strong>Ground-Truth CSI Design:</strong> sustainable, high-impact CSI frameworks rooted in proven community leadership, so corporate investment delivers real socio-economic value.</li>
+              <li><strong>Stakeholder & Community Mobilisation:</strong> authentic, high-trust partnerships between corporates, non-profit partners and local communities that strengthen your social licence to operate.</li>
+              <li><strong>B-BBEE & ESG Social Alignment:</strong> community upliftment initiatives structured to align seamlessly with Socio-Economic Development (SED) and ESG mandates.</li>
+            </ul>
+          </article>
+          <article class="card pillar reveal">
+            <span class="pillar-num" aria-hidden="true">II</span>
+            <h3>Board Strategy & Social Ethics Oversight</h3><ul class="checklist">
+              <li><strong>Grassroots-to-Boardroom Insights:</strong> lived operational insight, ethical stewardship and community accountability brought to boards and Social & Ethics Committees.</li>
+              <li><strong>Partner Vetting & Programme Governance:</strong> practical field experience applied to assessing implementing partners, strengthening grant accountability and ensuring transparent reporting.</li>
+            </ul>
+          </article>
+          <article class="card pillar reveal">
+            <span class="pillar-num" aria-hidden="true">III</span>
+            <h3>Strategic PR, Communications & Brand Positioning</h3><ul class="checklist">
+              <li><strong>Impact Storytelling & Reputation Management:</strong> turning social investments and community milestones into credible, high-trust stakeholder narratives.</li>
+              <li><strong>Brand Visibility & Stakeholder Campaigns:</strong> targeted marketing and communication that elevates social purpose without sounding like corporate spin.</li>
+              <li><strong>Media & Public Engagement:</strong> positioning executives and impact initiatives across media, industry panels and community platforms.</li>
+            </ul>
+          </article>
+          <article class="card pillar reveal">
+            <span class="pillar-num" aria-hidden="true">IV</span>
+            <h3>Technical Acumen & Digital Inclusion</h3><ul class="checklist">
+              <li><strong>Tech-Enabled CSI & Data Integrity:</strong> streamlined beneficiary data tracking, more accurate impact reporting and sound evaluation of digital tools for social programmes.</li>
+              <li><strong>Digital Transformation & Inclusion:</strong> advising boards and CSI teams on bridging the digital divide through practical technology skills and community digital access initiatives.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="section impact" id="impact" aria-labelledby="impact-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Proof on the Ground</p>
+          <h2 id="impact-title">Demonstrated Community Impact</h2>
+          <p class="section-intro">From first conversation to measurable outcomes, every link in the chain.</p>
+        </div><ol class="impact-list">
+          <li class="impact-item reveal">
+            <h3>Community Leadership & Mobilisation</h3>
+            <p>Led multi-stakeholder community upliftment initiatives focused on women, youth and socio-economic empowerment.</p>
+          </li>
+          <li class="impact-item reveal">
+            <h3>End-to-End Programme Execution</h3>
+            <p>Designed, marketed and delivered community programmes from concept and stakeholder buy-in through to measurable on-the-ground outcomes.</p>
+          </li>
+          <li class="impact-item reveal">
+            <h3>Strategic Partnerships & Visibility</h3>
+            <p>Built lasting alliances across community leaders, private sector sponsors and media platforms to amplify social impact.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- DELIVERABLES -->
+    <section class="section section-alt" id="deliverables" aria-labelledby="deliverables-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">What You Receive</p>
+          <h2 id="deliverables-title">Key Deliverables</h2>
+          <p class="section-intro">Tangible, board-ready outputs for every strategic area.</p>
+        </div>
+        <div class="deliverables">
+          <article class="deliverable reveal">
+            <h3>CSI & Community Strategy</h3><ul>
+              <li>Ground-Truth CSI & Community Upliftment Blueprints</li>
+              <li>Stakeholder Engagement & Community Consultation Frameworks</li>
+              <li>B-BBEE SED & Social Impact Alignment Plans</li>
+            </ul>
+          </article>
+          <article class="deliverable reveal">
+            <h3>Board & Committee Advisory</h3><ul>
+              <li>Social & Ethics Committee (SEC) Community Impact Briefings</li>
+              <li>Implementing Partner Due Diligence & Readiness Scorecards</li>
+              <li>Community Risk & Social Licence-to-Operate Assessments</li>
+            </ul>
+          </article>
+          <article class="deliverable reveal">
+            <h3>PR, Marketing & Brand</h3><ul>
+              <li>CSI Reputation & Impact Storytelling Strategies</li>
+              <li>Stakeholder & Media Communication Campaigns</li>
+              <li>Executive Thought Leadership & Annual Impact Narratives</li>
+            </ul>
+          </article>
+          <article class="deliverable reveal">
+            <h3>Digital & Technical Enablement</h3><ul>
+              <li>Beneficiary Data Tracking & Impact Reporting Systems</li>
+              <li>Community Digital Inclusion Programme Roadmaps</li>
+              <li>Practical Technology Assessments for Social Initiatives</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="feature-panel reveal" aria-labelledby="thought-title">
+          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+          <div>
+            <h3 id="thought-title">Published Thought Leadership</h3>
+            <p>Thought leadership articles and industry commentary from a seasoned columnist and contributor, translating complex social impact, leadership and community transformation themes into compelling executive commentary.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="section" id="credentials" aria-labelledby="credentials-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Academic Credentials</p>
+          <h2 id="credentials-title">Commercial Rigour, Formally Grounded</h2>
+        </div>
+        <div class="credentials-grid">
+          <article class="card degree reveal">
+            <h3>BCom Honours</h3>
+            <p>International Business Strategy, Economics & Financial Management</p>
+            <p class="institution">University of South Africa (UNISA)</p>
+          </article>
+          <article class="card degree reveal">
+            <h3>Bachelor of Commerce (BCom)</h3>
+            <p>General Business & Commerce</p>
+            <p class="institution">University of South Africa (UNISA)</p>
+          </article>
+        </div>
+        <div class="reveal">
+          <h3 class="domains-title">Core Domains</h3><ul class="domains">
+            <li>Board Strategy</li>
+            <li>CSI Transformation Frameworks</li>
+            <li>Strategic PR & Marketing</li>
+            <li>Digital Inclusion</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container reveal">
+        <p class="eyebrow">Work Together</p>
+        <h2 id="contact-title">Make your CSI strategy board-ready.</h2>
+        <p>Whether you're refreshing your CSI framework, preparing your Social & Ethics Committee, or telling your impact story with credibility, let's start with a conversation.</p>
+        <div class="contact-actions">
+          <!-- TODO: replace with your real email address -->
+          <a class="btn btn-gold btn-small header-cta" href="https://wa.me/27783095331" target="_blank" rel="noopener">Book a briefing</a>
+          <!-- TODO: replace with your LinkedIn profile URL -->
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/sis-mantoa-selepe-81913088" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Mantoa Consulting. All rights reserved.</span>
+      <span>Sis' Mantoa Selepe · Independent Board Strategist & CSI Practitioner</span>
+    </div>
+  </footer>
+
+  <script>
+    document.documentElement.classList.add("js");
+    const reveals = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      reveals.forEach((el) => io.observe(el));
+    } else {
+      reveals.forEach((el) => el.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
